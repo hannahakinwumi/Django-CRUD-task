@@ -1,0 +1,118 @@
+asgiref==3.5.2
+Django==4.0.5
+sqlparse==0.4.2
+tzdata==2022.1
+
+
+C:\Users\customer>cd Desktop
+
+C:\Users\customer\Desktop>cd env
+
+C:\Users\customer\Desktop\env>cd I4G035934ZSW
+
+C:\Users\customer\Desktop\env\I4G035934ZSW>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 1093-8AD3
+
+ Directory of C:\Users\customer\Desktop\env\I4G035934ZSW
+
+06/23/2022  03:31 PM    <DIR>          .
+06/23/2022  03:31 PM    <DIR>          ..
+06/23/2022  03:04 PM    <DIR>          blog
+06/23/2022  03:05 PM                 0 db.sqlite3
+06/23/2022  03:03 PM    <DIR>          I4G035934ZSW
+06/23/2022  02:46 PM               690 manage.py
+06/23/2022  03:19 PM    <DIR>          myenv
+06/23/2022  03:31 PM                64 requirements.txt
+               3 File(s)            754 bytes
+               5 Dir(s)  10,263,252,992 bytes free
+
+C:\Users\customer\Desktop\env\I4G035934ZSW>pip install -r requirements.txt
+Requirement already satisfied: asgiref==3.5.2 in c:\users\customer\appdata\local\programs\python\python310\lib\site-packages (from -r requirements.txt (line 1)) (3.5.2)
+Collecting Django==4.0.5
+  Using cached Django-4.0.5-py3-none-any.whl (8.0 MB)
+Requirement already satisfied: sqlparse==0.4.2 in c:\users\customer\appdata\local\programs\python\python310\lib\site-packages (from -r requirements.txt (line 3)) (0.4.2)
+Requirement already satisfied: tzdata==2022.1 in c:\users\customer\appdata\local\programs\python\python310\lib\site-packages (from -r requirements.txt (line 4)) (2022.1)
+Installing collected packages: Django
+  Attempting uninstall: Django
+    Found existing installation: Django 4.0.4
+    Uninstalling Django-4.0.4:
+      Successfully uninstalled Django-4.0.4
+Successfully installed Django-4.0.5
+WARNING: You are using pip version 22.0.4; however, version 22.1.2 is available.
+You should consider upgrading via the 'C:\Users\customer\AppData\Local\Programs\Python\Python310\python.exe -m pip install --upgrade pip' command.
+
+C:\Users\customer\Desktop\env\I4G035934ZSW>python manage.py makemigrations post
+Traceback (most recent call last):
+  File "C:\Users\customer\Desktop\env\I4G035934ZSW\manage.py", line 22, in <module>
+    main()
+  File "C:\Users\customer\Desktop\env\I4G035934ZSW\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\customer\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\management\__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\customer\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\management\__init__.py", line 420, in execute
+    django.setup()
+  File "C:\Users\customer\AppData\Local\Programs\Python\Python310\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\customer\AppData\Local\Programs\Python\Python310\lib\site-packages\django\apps\registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "C:\Users\customer\AppData\Local\Programs\Python\Python310\lib\site-packages\django\apps\config.py", line 228, in create
+    import_module(entry)
+  File "C:\Users\customer\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'post'
+
+C:\Users\customer\Desktop\env\I4G035934ZSW>python manage.py maakemigrations blog
+Traceback (most recent call last):
+  File "C:\Users\customer\Desktop\env\I4G035934ZSW\manage.py", line 22, in <module>
+    main()
+  File "C:\Users\customer\Desktop\env\I4G035934ZSW\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\customer\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\management\__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\customer\AppData\Local\Programs\Python\Python310\lib\site-packages\django\core\management\__init__.py", line 420, in execute
+    django.setup()
+  File "C:\Users\customer\AppData\Local\Programs\Python\Python310\lib\site-packages\django\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\customer\AppData\Local\Programs\Python\Python310\lib\site-packages\django\apps\registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "C:\Users\customer\AppData\Local\Programs\Python\Python310\lib\site-packages\django\apps\config.py", line 228, in create
+    import_module(entry)
+  File "C:\Users\customer\AppData\Local\Programs\Python\Python310\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'post'
+
+C:\Users\customer\Desktop\env\I4G035934ZSW>python manage.py makemigrations blog
+Migrations for 'blog':
+  blog\migrations\0001_initial.py
+    - Create model Post
+
+C:\Users\customer\Desktop\env\I4G035934ZSW>python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, blog, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying blog.0001_initial... OK
+  Applying sessions.0001_initial... OK
